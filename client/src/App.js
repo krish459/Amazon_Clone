@@ -1,10 +1,13 @@
-import logo from "./logo.svg";
+// import logo from "./logo.svg";
 import "./App.css";
+import Dashboard from "./screens/Dashboard";
+import Loginscreen from "./screens/Loginscreen";
 
 function App() {
   return (
     <div className="App">
-      <h1>This Is amazon clone and this is krish</h1>
+      {/* <Loginscreen /> */}
+      <Dashboard />
     </div>
   );
 }
