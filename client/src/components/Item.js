@@ -14,7 +14,15 @@ import {
   Box,
 } from "@chakra-ui/react";
 
-function Item({ title, description, price, image, alt }) {
+import { useDispatch, useSelector } from "react-redux";
+import { addToCart } from "../actions/cartAction";
+
+function Item({ _id, title, description, price, image, alt }) {
+  const dispatch = useDispatch();
+  function addtocart() {
+    console.log({ _id, title, price, image });
+    dispatch(addToCart(_id, title, price, image));
+  }
   return (
     <>
       <Card maxWidth="sm" maxHeight="550px">
@@ -39,7 +47,7 @@ function Item({ title, description, price, image, alt }) {
         <Divider />
         <CardFooter>
           <ButtonGroup spacing="2" margin="auto">
-            <Button variant="solid" colorScheme="blue">
+            <Button variant="solid" colorScheme="blue" onClick={addtocart}>
               Buy now
             </Button>
             <Button variant="ghost" colorScheme="blue">

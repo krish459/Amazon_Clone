@@ -20,6 +20,7 @@ function ItemList() {
         {items.map((e) => (
           <Box key={e._id}>
             <Item
+              _id={e._id}
               title={e.title}
               description={e.description}
               price={e.price}

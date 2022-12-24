@@ -5,10 +5,12 @@ import thunk from "redux-thunk";
 
 import { composeWithDevTools } from "redux-devtools-extension";
 import { addItemReducer, getAllItemsReducer } from "./reducers/itemreducer";
+import { cartReducer } from "./reducers/cartReducer";
 
 const finalReducer = combineReducers({
   getAllItemsReducer: getAllItemsReducer,
   addItemReducer: addItemReducer,
+  cartReducer: cartReducer,
 });
 
 const initialState = {};
