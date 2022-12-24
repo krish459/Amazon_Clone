@@ -22,7 +22,7 @@ export default function Cartscreen() {
                 <div className="text-left m-1 w-100">
                   <h1>{item.name}</h1>
                   <h1>
-                    Price : {item.quantity} * {item.price} = {item.price}
+                    Price : {item.quantity} * {item.price}
                   </h1>
                   <h1 style={{ display: "inline" }}>Quantity : </h1>
                   <i
@@ -40,7 +40,6 @@ export default function Cartscreen() {
                       dispatch(addToCart(item, item.quantity - 1));
                     }}
                   ></i>
-                  <hr />
                 </div>
                 <div className="m-1 w-100">
                   <img

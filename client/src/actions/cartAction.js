@@ -4,7 +4,7 @@ export const addToCart = (item) => (dispatch, getState) => {
     _id: item._id,
     image: item.image,
     quantity: Number(1),
-    prices: item.price,
+    price: item.price,
   };
 
   if (cartItem.quantity > 10) {

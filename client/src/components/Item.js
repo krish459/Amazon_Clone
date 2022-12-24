@@ -21,7 +21,7 @@ function Item({ _id, title, description, price, image, alt }) {
   const dispatch = useDispatch();
   function addtocart() {
     console.log({ _id, title, price, image });
-    dispatch(addToCart(_id, title, price, image));
+    dispatch(addToCart({ _id, title, price, image }));
   }
   return (
     <>
@@ -47,10 +47,10 @@ function Item({ _id, title, description, price, image, alt }) {
         <Divider />
         <CardFooter>
           <ButtonGroup spacing="2" margin="auto">
-            <Button variant="solid" colorScheme="blue" onClick={addtocart}>
+            <Button variant="solid" colorScheme="blue">
               Buy now
             </Button>
-            <Button variant="ghost" colorScheme="blue">
+            <Button variant="ghost" colorScheme="blue" onClick={addtocart}>
               Add to cart
             </Button>
           </ButtonGroup>
