@@ -7,7 +7,7 @@ import Topsellers from "../components/Topsellers";
 function Dashboard() {
   return (
     <>
-      <Navbar />
+      {/* <Navbar /> */}
       <ImageSlider />
       <ItemList />
       <Topsellers />
@@ -16,4 +16,3 @@ function Dashboard() {
 }
 
 export default Dashboard;
-

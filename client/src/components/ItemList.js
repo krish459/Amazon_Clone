@@ -61,7 +61,7 @@ function ItemList() {
             </button>
             <button
               className="btn btn-warning"
-              onClick={() => fliterItem("Clothes")}
+              onClick={() => fliterItem("clothes")}
             >
               Clothes
             </button>

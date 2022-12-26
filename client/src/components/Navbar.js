@@ -12,8 +12,9 @@ import {
   IconButton,
   Image,
   Box,
+  Link,
 } from "@chakra-ui/react";
-import { SearchIcon } from "@chakra-ui/icons";
+import { SearchIcon, StarIcon } from "@chakra-ui/icons";
 
 function Navbar() {
   const [language, setLanguage] = useState("En");
@@ -31,21 +32,22 @@ function Navbar() {
         >
           <Box>
             <Button bg="black" variant="unstyled">
-              <Image
-                justifyContent="center"
-                marginY="0"
-                padding="1"
-                left="10"
-                width="150px"
-                height="6vh"
-                objectFit="cover"
-                src="https://www.wired.com/wp-content/uploads/2016/04/Amazon-Logo-PNG-1200x630.jpg"
-                alt="Amazon"
-              />
+              <Link href="/home">
+                <Image
+                  justifyContent="center"
+                  marginY="0"
+                  padding="1"
+                  left="10"
+                  width="150px"
+                  height="6vh"
+                  objectFit="cover"
+                  src="https://www.wired.com/wp-content/uploads/2016/04/Amazon-Logo-PNG-1200x630.jpg"
+                  alt="Amazon"
+                />
+              </Link>
             </Button>
           </Box>
-
-          <Container marginX="10" alignItems="center" width="800%">
+          <Container marginX="5" alignItems="center" width="800%">
             <FormControl width="205%">
               <HStack>
                 <Input
@@ -66,21 +68,24 @@ function Navbar() {
             <HStack spacing={3}>
               <FormControl color="white">
                 <HStack>
-                  <FormLabel></FormLabel>
                   <Select
                     bg="black"
                     borderColor="white"
                     color="white"
                     placeholder="En"
-                    width="sm"
+                    width="20"
                   >
                     <option>Hin</option>
                     <option>Guj</option>
                   </Select>
                 </HStack>
               </FormControl>
+
               <Button paddingX="10" marginX="10" justifyContent="center">
-                Register
+                <Link href="/cart">Cart</Link>
+              </Button>
+              <Button paddingX="10" marginX="10" justifyContent="center">
+                <Link href="/register">Register</Link>
               </Button>
             </HStack>
           </Container>

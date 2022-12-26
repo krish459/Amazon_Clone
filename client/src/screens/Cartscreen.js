@@ -15,7 +15,7 @@ export default function Cartscreen() {
     <div>
       <div className="row justify-content-center">
         <div className="col-md-6 ">
-          <h2 style={{ fontSize: "40px" }}>My Cart</h2>
+          <h2 style={{ fontSize: "40px", margin: "13vh" }}>My Cart</h2>
           {cartItems.map((item) => {
             return (
               <div className="flex-container ">
