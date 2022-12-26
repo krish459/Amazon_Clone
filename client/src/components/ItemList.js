@@ -19,12 +19,20 @@ function ItemList() {
 
   const { items } = itemsstate;
 
-  //   const [fliterItem, setfliterItem] = useState("All");
+  const [krishItem, setKrishItem] = useState(items);
   //   console.log(fliterItem);
 
   useEffect(() => {
     dispatch(getAllItems());
   }, []);
+
+  const fliterItem = (categItem) => {
+    const updatedItems = items.filter((curElem) => {
+      return curElem.type === categItem;
+    });
+
+    setKrishItem(updatedItems);
+  };
 
   return (
     <>
@@ -35,25 +43,25 @@ function ItemList() {
           <div className="d-flex justify-content-around">
             <button
               className="btn btn-warning"
-              //   onClick={() => setfliterItem("All")}
+              onClick={() => setKrishItem(items)}
             >
               All
             </button>
             <button
               className="btn btn-warning"
-              //   onClick={setfliterItem("Furniture")}
+              onClick={() => fliterItem("Furniture")}
             >
               Furniture
             </button>
             <button
               className="btn btn-warning"
-              //   onClick={setfliterItem("Books")}
+              onClick={() => fliterItem("Book")}
             >
               Books
             </button>
             <button
               className="btn btn-warning"
-              //   onClick={setfliterItem("Clothes")}
+              onClick={() => fliterItem("Clothes")}
             >
               Clothes
             </button>
@@ -61,7 +69,7 @@ function ItemList() {
         </div>
       </div>
       <SimpleGrid columns={4} spacing="2px" marginTop="13vh" zIndex={-1}>
-        {items.map((e) => (
+        {krishItem.map((e) => (
           <Box key={e._id}>
             <Item
               _id={e._id}
