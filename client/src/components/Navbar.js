@@ -32,7 +32,7 @@ function Navbar() {
         >
           <Box>
             <Button bg="black" variant="unstyled">
-              <Link href="/home">
+              <Link href="/">
                 <Image
                   justifyContent="center"
                   marginY="0"

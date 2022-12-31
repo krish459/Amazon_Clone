@@ -10,26 +10,24 @@ import {
   FormControl,
   FormLabel,
   Input,
-  Select,
-  Checkbox,
   Button,
   Textarea,
 } from "@chakra-ui/react";
-import { AspectRatio } from "@chakra-ui/react";
+import { useDispatch, useSelector } from "react-redux";
 
 function ContactMap() {
   const [nemail, setnemail] = useState("");
   const [naam, setnaam] = useState("");
   const [mess, setmess] = useState("");
-  const mailer = () => {
+  const dispatch = useDispatch();
+  function mailer() {
     const ele = { nemail, naam, mess };
 
     console.log(ele);
-
     setnemail("");
     setnaam("");
     setmess("");
-  };
+  }
   //   router(nemail, naam, mess);
 
   return (

@@ -14,6 +14,7 @@ import {
   Checkbox,
   Button,
 } from "@chakra-ui/react";
+import Cartscreen from "./Cartscreen";
 
 function Loginscreen() {
   return (
@@ -124,6 +125,7 @@ function Loginscreen() {
           </SimpleGrid>
         </VStack>
       </Flex>
+      <Cartscreen />
     </Container>
   );
 }

@@ -12,7 +12,7 @@ function App() {
       <Navbar />
       <Router>
         <Routes>
-          <Route exact path="/home" element={<Dashboard />}></Route>
+          <Route exact path="/" element={<Dashboard />}></Route>
           <Route path="/cart" element={<Cartscreen />}></Route>
           <Route path="/register" element={<Loginscreen />}></Route>
         </Routes>
